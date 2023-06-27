@@ -7,10 +7,17 @@
     <meta name="author" content="Mariya Doronkina">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariya Doronkina</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap">
+  <style>
+    body {
+      font-family: 'Urbanist', sans-serif;
+    }
+  </style>
 </head>
 <body>
     <h1>Mariya Doronkina</h1>
-    <img src="https://media.licdn.com/dms/image/C4D03AQFACT3XWOVj2Q/profile-displayphoto-shrink_800_800/0/1619003929294?e=1691625600&v=beta&t=lU5NXXisob3ZnUwjFreLUOfyS1oP18V-la-KFh2nSRI" alt="Photo of Mariya Doronkina" width = "200" height = "200"> 
+    <img src="https://media.licdn.com/dms/image/C4D03AQFACT3XWOVj2Q/profile-displayphoto-shrink_800_800/0/1619003929294?e=1691625600&v=beta&t=lU5NXXisob3ZnUwjFreLUOfyS1oP18V-la-KFh2nSRI" alt="Photo of Mariya Doronkina" width = "200" height = "200" class="circular-image"> 
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -33,21 +40,18 @@
     <hr>
     <section id="experience">
     <h2>Experience</h2>
-        <p>
-        <dl> 
-            <dt>Throughout my life, I have always worked in the field of <strong>music education</strong>.</dt>
-            <dd>- From 2013 to 2019, I worked as a Music Theory Teacher at Children's Music School No. 20 in the city of Minsk.</dd>
-            <dd>- From 2019 to autumn 2021, I worked at the Belarusian State Academy of Music as a Junior Researcher in the Research Department.</dd>
-            <dd>- Currently, I work as an educator and music teacher at the education center Sport+Academy.</dd>
-        </dl>
-         
-        <dl>
-            <dt>At the same time, I have always been interested in <strong>software development.</strong></dt>
-            <dd>- In early 2021, before immigrating, I independently studied the basics of SQL and HTML on various websites.</dd>
-            <dd>- In February 2023, I started studying the basics of JavaScript in the Russian language.</dd>
-            <dd>- Since March 2023, I have been studying in the Intro to Programming class organized by <a href="https://codethedream.org/">Code the Dream.</a></dd>
-        </dl>
-        </p>
+        <p>Throughout my life, I have always worked in the field of <strong>music education</strong>.</p>
+        <ul class="experience-list">
+            <li class="experience-item">From 2013 to 2019, I worked as a Music Theory Teacher at Children's Music School No. 20 in the city of Minsk.</li>
+            <li class="experience-item">From 2019 to autumn 2021, I worked at the Belarusian State Academy of Music as a Junior Researcher in the Research Department.</li>
+            <li class="experience-item">Currently, I work as an educator and music teacher at the education center Sport+Academy.</li>
+        </ul>
+        <p>At the same time, I have always been interested in <strong>software development.</strong></p>
+        <ul class="experience-list">
+            <li class="experience-item">In early 2021, before immigrating, I independently studied the basics of SQL and HTML on various websites.</li>
+            <li class="experience-item">In February 2023, I started studying the basics of JavaScript in the Russian language.</li>
+            <li class="experience-item">Since March 2023, I have been studying in the Intro to Programming class organized by Code the Dream.</li>
+        </ul>
     </section>
     <hr>
     <section id="education">
@@ -130,7 +134,7 @@
     </section>
     <secrion id="messages">
         <h2>Messages</h2>
-        <ul>
+        <ul id="messageList">
             <div id="message_display"></div>
         </ul>
     </secrion>
