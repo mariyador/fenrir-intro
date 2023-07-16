@@ -56,3 +56,28 @@ document.addEventListener('DOMContentLoaded', function() {
     messageForm.reset();
   });
 });
+
+let githubRequest = new XMLHttpRequest();
+githubRequest.open ('GET', 'https://api.github.com/users/mariyador/repos');
+githubRequest.send();
+githubRequest.addEventListener('load', function(event) {
+  let repositories = JSON.parse(this.response);
+  console.log(repositories);
+
+  let projectsSection = document.getElementById('projects');
+  let projectsList = projectsSection.querySelector('ul');
+  for (let i = 0; i < repositories.length; i++) {
+    let project = document.createElement('li');
+
+    let link = document.createElement('a')
+    link.href = repositories[i].html_url;
+    link.textContent = repositories[i].name;
+    project.appendChild(link);
+
+    let date = document.createElement('p');
+    date.textContent = 'Created at: ' + new Date(repositories[i].created_at).toLocaleDateString();
+    project.appendChild(date)
+
+    projectsList.appendChild(project);
+  }
+});
