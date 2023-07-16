@@ -87,6 +87,10 @@ section {
     border-radius: 5px;
 }
 
+#projects li a {
+font-style: italic;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
